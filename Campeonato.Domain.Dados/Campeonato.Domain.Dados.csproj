@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Campeonato.Domain\Campeonato.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.9" />
+  </ItemGroup>
+
 </Project>
