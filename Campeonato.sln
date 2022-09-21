@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campeonato.Domain.Api", "Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campeonato.Domain.Shared", "Campeonato.Domain.Shared\Campeonato.Domain.Shared.csproj", "{71297AF6-B7F8-4300-AFDF-1E4C9081A412}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campeonato.Domain.Dados", "Campeonato.Domain.Dados\Campeonato.Domain.Dados.csproj", "{06241872-EFC2-4764-999C-68FDD7E1C9A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{71297AF6-B7F8-4300-AFDF-1E4C9081A412}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71297AF6-B7F8-4300-AFDF-1E4C9081A412}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71297AF6-B7F8-4300-AFDF-1E4C9081A412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06241872-EFC2-4764-999C-68FDD7E1C9A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06241872-EFC2-4764-999C-68FDD7E1C9A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06241872-EFC2-4764-999C-68FDD7E1C9A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06241872-EFC2-4764-999C-68FDD7E1C9A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
