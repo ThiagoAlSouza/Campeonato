@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Campeonato.Domain.Shared\Campeonato.Domain.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
