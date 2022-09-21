@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campeonato.Domain", "Campeonato.Domain\Campeonato.Domain.csproj", "{4ED2CC0A-BA96-421A-9BCC-E04B434F9CA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campeonato.Domain.Api", "Campeonato.Domain.Api\Campeonato.Domain.Api.csproj", "{CFDC9168-A4E9-4B63-B616-26ADE8A03FDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4ED2CC0A-BA96-421A-9BCC-E04B434F9CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ED2CC0A-BA96-421A-9BCC-E04B434F9CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ED2CC0A-BA96-421A-9BCC-E04B434F9CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFDC9168-A4E9-4B63-B616-26ADE8A03FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFDC9168-A4E9-4B63-B616-26ADE8A03FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFDC9168-A4E9-4B63-B616-26ADE8A03FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFDC9168-A4E9-4B63-B616-26ADE8A03FDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
