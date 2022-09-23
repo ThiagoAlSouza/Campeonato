@@ -1,6 +1,7 @@
 ﻿using Campeonato.Domain.Dados.Data;
 using Campeonato.Domain.Dados.Repositories.Interfaces;
 using Campeonato.Domain.Entities;
+using Campeonato.Domain.Resource.Messages;
 using Microsoft.EntityFrameworkCore;
 
 namespace Campeonato.Domain.Dados.Repositories;
@@ -35,7 +36,7 @@ public class RepositoryTeam : IRepositoryTeam
         }
         catch (ArgumentNullException)
         {
-            throw new Exception("Algum registro está nulo.");
+            throw new Exception(Messages.AlgumRegistroNulo);
         }
     }
 
@@ -50,7 +51,7 @@ public class RepositoryTeam : IRepositoryTeam
         }
         catch (DbUpdateException)
         {
-            throw new Exception("Erro ao salvar no banco.");
+            throw new Exception(Messages.ErroSalvarBanco);
         }
     }
 
