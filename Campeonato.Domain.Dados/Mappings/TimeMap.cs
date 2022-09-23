@@ -1,12 +1,12 @@
-﻿using Campeonato.Domain.Entities;
+﻿using Campeonato.Domain.Entities.Team;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Campeonato.Domain.Dados.Mappings;
 
-public class TimeMap : IEntityTypeConfiguration<Team>
+public class TimeMap : IEntityTypeConfiguration<TeamEntity>
 {
-    public void Configure(EntityTypeBuilder<Team> builder)
+    public void Configure(EntityTypeBuilder<TeamEntity> builder)
     {
         builder.ToTable("TIMES");
         builder.HasKey(x => x.Id);

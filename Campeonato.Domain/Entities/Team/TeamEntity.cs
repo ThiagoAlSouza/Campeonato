@@ -1,10 +1,10 @@
-﻿namespace Campeonato.Domain.Entities;
+﻿namespace Campeonato.Domain.Entities.Team;
 
-public class Team
+public class TeamEntity
 {
     #region MyRegion
 
-    public Team(int id, string name, string coach, int numberPlayer, string uniformColor, byte[] shield)
+    public TeamEntity(int id, string name, string coach, int numberPlayer, string uniformColor, byte[] shield)
     {
         Id = id;
         Name = name;
@@ -23,7 +23,7 @@ public class Team
     public string Coach { get; private set; }
     public int NumberPlayer { get; private set; }
     public string UniformColor { get; private set; }
-    public Byte[] Shield { get; private set; }
+    public byte[] Shield { get; private set; }
 
     #endregion
 }

@@ -1,10 +1,10 @@
 ﻿using Campeonato.Domain.Dados.Data;
-using Campeonato.Domain.Dados.Repositories.Interfaces;
-using Campeonato.Domain.Entities;
+using Campeonato.Domain.Entities.Team;
+using Campeonato.Domain.Entities.Team.Repository;
 using Campeonato.Domain.Resource.Messages;
 using Microsoft.EntityFrameworkCore;
 
-namespace Campeonato.Domain.Dados.Repositories;
+namespace Campeonato.Domain.Dados.Repositories.Team;
 
 public class RepositoryTeam : IRepositoryTeam
 {
@@ -25,7 +25,7 @@ public class RepositoryTeam : IRepositoryTeam
 
     #region Methods
 
-    public async Task<IEnumerable<Team>> GetAllTeams()
+    public async Task<IEnumerable<TeamEntity>> GetAllTeams()
     {
         try
         {
@@ -40,7 +40,7 @@ public class RepositoryTeam : IRepositoryTeam
         }
     }
 
-    public async Task<Team> Save(Team team)
+    public async Task<TeamEntity> Save(TeamEntity team)
     {
         try
         {

@@ -3,7 +3,7 @@ using Campeonato.Domain.Shared.Command.Interfaces;
 
 namespace Campeonato.Domain.Commands;
 
-internal class CreateTeamCommand : ICommand
+public class CreateTeamCommand : ICommand
 {
     #region Constructors
 
