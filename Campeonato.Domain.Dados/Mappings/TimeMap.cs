@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Campeonato.Domain.Dados.Mappings;
 
-public class TimeMap : IEntityTypeConfiguration<Time>
+public class TimeMap : IEntityTypeConfiguration<Team>
 {
-    public void Configure(EntityTypeBuilder<Time> builder)
+    public void Configure(EntityTypeBuilder<Team> builder)
     {
         builder.ToTable("TIMES");
         builder.HasKey(x => x.Id);

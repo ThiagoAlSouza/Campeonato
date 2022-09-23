@@ -8,7 +8,7 @@ public class DataContext : DbContext
 {
     public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
-    public DbSet<Time> Times { get; set; }
+    public DbSet<Team> Times { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

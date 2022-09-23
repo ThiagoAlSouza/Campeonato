@@ -1,10 +1,10 @@
 ﻿namespace Campeonato.Domain.Entities;
 
-public class Time
+public class Team
 {
     #region MyRegion
 
-    public Time(int id, string name, string coach, int numberPlayer, string uniformColor, byte[] shield)
+    public Team(int id, string name, string coach, int numberPlayer, string uniformColor, byte[] shield)
     {
         Id = id;
         Name = name;
