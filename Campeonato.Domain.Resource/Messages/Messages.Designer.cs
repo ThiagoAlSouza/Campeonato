@@ -36,7 +36,7 @@ namespace Campeonato.Domain.Resource.Messages {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Campeonato.Domain.Resource.Messages.Messages", typeof(Messages).Assembly);
@@ -51,7 +51,7 @@ namespace Campeonato.Domain.Resource.Messages {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -75,6 +75,24 @@ namespace Campeonato.Domain.Resource.Messages {
         public static string ErroSalvarBanco {
             get {
                 return ResourceManager.GetString("ErroSalvarBanco", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O tamanho do nome do time deve ser maior que 2..
+        /// </summary>
+        public static string NomeTimePequeno {
+            get {
+                return ResourceManager.GetString("NomeTimePequeno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O limite de jogadores foi ultrapassado..
+        /// </summary>
+        public static string UltrapassouLimiteJogadores {
+            get {
+                return ResourceManager.GetString("UltrapassouLimiteJogadores", resourceCulture);
             }
         }
     }

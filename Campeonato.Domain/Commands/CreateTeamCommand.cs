@@ -1,4 +1,5 @@
-﻿using Campeonato.Domain.Shared.Command.Interfaces;
+﻿using Campeonato.Domain.Resource.Messages;
+using Campeonato.Domain.Shared.Command.Interfaces;
 
 namespace Campeonato.Domain.Commands;
 
@@ -33,7 +34,15 @@ internal class CreateTeamCommand : ICommand
 
     public bool Validate(out List<string> validationsErrors)
     {
-        throw new NotImplementedException();
+        validationsErrors = new List<string>();
+
+        if (Name.Length <= 2)
+            validationsErrors.Add(Messages.NomeTimePequeno);
+
+        if (NumberPlayer > 30)
+            validationsErrors.Add(Messages.UltrapassouLimiteJogadores);
+
+        return validationsErrors.Count <= 0;
     }
 
     #endregion

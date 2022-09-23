@@ -123,4 +123,10 @@
   <data name="ErroSalvarBanco" xml:space="preserve">
     <value>Erro ao salvar no banco.</value>
   </data>
+  <data name="NomeTimePequeno" xml:space="preserve">
+    <value>O tamanho do nome do time deve ser maior que 2.</value>
+  </data>
+  <data name="UltrapassouLimiteJogadores" xml:space="preserve">
+    <value>O limite de jogadores foi ultrapassado.</value>
+  </data>
 </root>
