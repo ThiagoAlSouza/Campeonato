@@ -1,4 +1,5 @@
-﻿using Campeonato.Domain.Entities;
+﻿using Campeonato.Domain.Dados.Mappings;
+using Campeonato.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Campeonato.Domain.Dados.Data;
@@ -11,6 +12,6 @@ public class DataContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfiguration(new TimeMap());
     }
 }
