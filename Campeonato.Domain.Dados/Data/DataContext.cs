@@ -7,7 +7,7 @@ public class DataContext : DbContext
 {
     public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
-    public DbSet<CampeonatoEntity> Campeonatos { get; set; }
+    public DbSet<Time> Times { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
