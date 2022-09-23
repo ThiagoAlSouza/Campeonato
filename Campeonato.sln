@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campeonato.Domain", "Campeonato.Domain\Campeonato.Domain.csproj", "{4ED2CC0A-BA96-421A-9BCC-E04B434F9CA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Campeonato.Domain", "Campeonato.Domain\Campeonato.Domain.csproj", "{4ED2CC0A-BA96-421A-9BCC-E04B434F9CA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campeonato.Domain.Api", "Campeonato.Domain.Api\Campeonato.Domain.Api.csproj", "{CFDC9168-A4E9-4B63-B616-26ADE8A03FDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Campeonato.Domain.Api", "Campeonato.Domain.Api\Campeonato.Domain.Api.csproj", "{CFDC9168-A4E9-4B63-B616-26ADE8A03FDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campeonato.Domain.Shared", "Campeonato.Domain.Shared\Campeonato.Domain.Shared.csproj", "{71297AF6-B7F8-4300-AFDF-1E4C9081A412}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Campeonato.Domain.Shared", "Campeonato.Domain.Shared\Campeonato.Domain.Shared.csproj", "{71297AF6-B7F8-4300-AFDF-1E4C9081A412}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campeonato.Domain.Dados", "Campeonato.Domain.Dados\Campeonato.Domain.Dados.csproj", "{06241872-EFC2-4764-999C-68FDD7E1C9A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Campeonato.Domain.Dados", "Campeonato.Domain.Dados\Campeonato.Domain.Dados.csproj", "{06241872-EFC2-4764-999C-68FDD7E1C9A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campeonato.Domain.Resource", "Campeonato.Domain.Resource\Campeonato.Domain.Resource.csproj", "{C977D340-4603-4B23-90A2-39EF1D1B1A54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{06241872-EFC2-4764-999C-68FDD7E1C9A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06241872-EFC2-4764-999C-68FDD7E1C9A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06241872-EFC2-4764-999C-68FDD7E1C9A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C977D340-4603-4B23-90A2-39EF1D1B1A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C977D340-4603-4B23-90A2-39EF1D1B1A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C977D340-4603-4B23-90A2-39EF1D1B1A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C977D340-4603-4B23-90A2-39EF1D1B1A54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

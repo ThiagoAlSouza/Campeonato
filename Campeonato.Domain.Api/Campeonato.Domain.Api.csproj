@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Campeonato.Domain.Resource\Campeonato.Domain.Resource.csproj" />
     <ProjectReference Include="..\Campeonato.Domain.Shared\Campeonato.Domain.Shared.csproj" />
     <ProjectReference Include="..\Campeonato.Domain\Campeonato.Domain.csproj" />
   </ItemGroup>
