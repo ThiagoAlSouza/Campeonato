@@ -1,9 +1,7 @@
 ﻿using Campeonato.Domain.Commands;
-using Campeonato.Domain.Entities.Team;
 using Campeonato.Domain.Entities.Team.Repository;
 using Campeonato.Domain.Handlers;
 using Campeonato.Domain.Shared.Command;
-using Campeonato.Domain.Shared.Handler.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Campeonato.Domain.Api.Controllers.Campeonato;
@@ -46,7 +44,7 @@ public class TeamController : ControllerBase
 
     [HttpPost]
     [Route("teams")]
-    public async Task<IActionResult> Post([FromBody] CreateTeamCommand body)
+    public IActionResult Post([FromBody] CreateTeamCommand body)
     {
         try
         {
