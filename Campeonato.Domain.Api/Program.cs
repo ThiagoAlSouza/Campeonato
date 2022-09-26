@@ -1,16 +1,19 @@
 using Campeonato.Domain.Dados.Data;
 using Campeonato.Domain.Dados.Repositories.Team;
 using Campeonato.Domain.Entities.Team.Repository;
+using Campeonato.Domain.Handlers;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-AddServices(builder);
+ConfigureServices(builder);
 
 var app = builder.Build();
+
+app.UseCors(x => x
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 if (app.Environment.IsDevelopment())
 {
@@ -23,8 +26,13 @@ app.UseAuthorization();
 app.MapControllers();
 app.Run();
 
-void AddServices(WebApplicationBuilder builder)
+void ConfigureServices(WebApplicationBuilder builder)
 {
-    builder.Services.AddDbContext<DataContext>();
+    builder.Services.AddControllers();
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
+
+    builder.Services.AddDbContext<DataContext>(x => x.UseInMemoryDatabase("Campeonato"));
     builder.Services.AddTransient<IRepositoryTeam, RepositoryTeam>();
+    builder.Services.AddTransient<TeamHandler>();
 }

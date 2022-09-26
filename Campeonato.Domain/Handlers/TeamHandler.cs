@@ -1,6 +1,7 @@
 ﻿using Campeonato.Domain.Commands;
 using Campeonato.Domain.Entities.Team;
 using Campeonato.Domain.Entities.Team.Repository;
+using Campeonato.Domain.Resource.Messages;
 using Campeonato.Domain.Shared.Command;
 using Campeonato.Domain.Shared.Handler.Interfaces;
 
@@ -29,9 +30,9 @@ public class TeamHandler : IHandler<CreateTeamCommand>
     public CommandResult Handle(CreateTeamCommand command)
     {
         if (!command.Validate(out errors))
-            return new CommandResult("Os dados de entrada estão inválidos.", false, errors);
+            return new CommandResult(Messages.AlgumRegistroNulo, false, errors);
 
-        var team = new TeamEntity(command.Name, command.Coach, command.NumberPlayer, command.UniformColor, command.Shield);
+        var team = new TeamEntity(command.Name, command.Coach, command.NumberPlayer, command.UniformColor, new byte[23]);
 
         _repositoryTeam.Save(team);
 

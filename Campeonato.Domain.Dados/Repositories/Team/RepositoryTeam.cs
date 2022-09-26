@@ -30,7 +30,7 @@ public class RepositoryTeam : IRepositoryTeam
         try
         {
             return await _dataContext
-                .Times
+                .Teams
                 .AsNoTracking()
                 .ToListAsync();
         }
@@ -44,7 +44,7 @@ public class RepositoryTeam : IRepositoryTeam
     {
         try
         {
-            await _dataContext.AddAsync(team);
+            await _dataContext.Teams.AddAsync(team);
             await _dataContext.SaveChangesAsync();
 
             return team;

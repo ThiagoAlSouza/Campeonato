@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Campeonato.Domain.Api.Controllers;
+namespace Campeonato.Domain.Api.Controllers.Home;
 
 public class HomeController : ControllerBase
 {
