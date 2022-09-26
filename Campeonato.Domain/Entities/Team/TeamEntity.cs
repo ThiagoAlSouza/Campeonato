@@ -4,9 +4,8 @@ public class TeamEntity
 {
     #region MyRegion
 
-    public TeamEntity(int id, string name, string coach, int numberPlayer, string uniformColor, byte[] shield)
+    public TeamEntity(string name, string coach, int numberPlayer, string uniformColor, byte[] shield)
     {
-        Id = id;
         Name = name;
         Coach = coach;
         NumberPlayer = numberPlayer;
