@@ -30,13 +30,13 @@ public class TeamHandler : IHandler<CreateTeamCommand>
     public CommandResult Handle(CreateTeamCommand command)
     {
         if (!command.Validate(out errors))
-            return new CommandResult(Messages.AlgumRegistroNulo, false, errors);
+            return new CommandResult(false, Messages.AlgumRegistroNulo, errors);
 
         var team = new TeamEntity(command.Name, command.Coach, command.NumberPlayer, command.UniformColor, new byte[23]);
 
         _repositoryTeam.Save(team);
 
-        return new CommandResult("Registro salvo com sucesso", true, team);
+        return new CommandResult(true, Messages.RegistroSalvoSucesso, team);
     }
 
     #endregion

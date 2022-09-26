@@ -88,6 +88,15 @@ namespace Campeonato.Domain.Resource.Messages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O registro foi salvo com sucesso..
+        /// </summary>
+        public static string RegistroSalvoSucesso {
+            get {
+                return ResourceManager.GetString("RegistroSalvoSucesso", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O limite de jogadores foi ultrapassado..
         /// </summary>
         public static string UltrapassouLimiteJogadores {

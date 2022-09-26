@@ -126,6 +126,9 @@
   <data name="NomeTimePequeno" xml:space="preserve">
     <value>O tamanho do nome do time deve ser maior que 2.</value>
   </data>
+  <data name="RegistroSalvoSucesso" xml:space="preserve">
+    <value>O registro foi salvo com sucesso.</value>
+  </data>
   <data name="UltrapassouLimiteJogadores" xml:space="preserve">
     <value>O limite de jogadores foi ultrapassado.</value>
   </data>

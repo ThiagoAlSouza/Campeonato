@@ -6,10 +6,10 @@ public class CommandResult
 
     public CommandResult() { }
 
-    public CommandResult(string message, bool success, object? data)
+    public CommandResult(bool success, string message, object? data)
     {
-        Message = message;
         Success = success;
+        Message = message;
         Data = data;
     }
 
@@ -17,8 +17,8 @@ public class CommandResult
 
     #region Properties
 
-    public string Message { get; set; }
     public bool Success { get; set; }
+    public string Message { get; set; }
     public object? Data { get; set; }
 
     #endregion

@@ -34,11 +34,11 @@ public class TeamController : ControllerBase
     {
         try
         {
-            return Ok(await _repositoryTeam.GetAllTeams());
+            return Ok(new CommandResult(true, string.Empty, await _repositoryTeam.GetAllTeams()));
         }
         catch (Exception e)
         {
-            return BadRequest(new CommandResult(e.Message, false, null));
+            return BadRequest(new CommandResult(false, e.Message, null));
         }
     }
 
@@ -54,7 +54,7 @@ public class TeamController : ControllerBase
         }
         catch (Exception e)
         {
-            return BadRequest(new CommandResult(e.Message, false, body));
+            return BadRequest(new CommandResult(false, e.Message, body));
         }
     }
 
