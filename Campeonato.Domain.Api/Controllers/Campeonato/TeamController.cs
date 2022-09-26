@@ -14,14 +14,16 @@ public class TeamController : ControllerBase
     #region Privates
 
     private readonly IRepositoryTeam _repositoryTeam;
+    private readonly TeamHandler _teamHandler;
 
     #endregion
 
     #region Constructors
 
-    public TeamController(IRepositoryTeam repositoryTeam)
+    public TeamController(IRepositoryTeam repositoryTeam, TeamHandler teamHandler)
     {
         _repositoryTeam = repositoryTeam;
+        _teamHandler = teamHandler;
     }
 
     #endregion
@@ -44,12 +46,11 @@ public class TeamController : ControllerBase
 
     [HttpPost]
     [Route("teams")]
-    public async Task<IActionResult> Post([FromBody] CreateTeamCommand body
-        , [FromServices]TeamHandler handler)
+    public async Task<IActionResult> Post([FromBody] CreateTeamCommand body)
     {
         try
         {
-            var result = handler.Handle(body);
+            var result = _teamHandler.Handle(body);
             return Ok(result);
         }
         catch (Exception e)
