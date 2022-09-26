@@ -13,6 +13,7 @@ public class TeamHandler : IHandler<CreateTeamCommand>
 
     private readonly IRepositoryTeam _repositoryTeam;
     private List<string> errors = new();
+    private byte[] shield;
 
     #endregion
 
@@ -32,7 +33,10 @@ public class TeamHandler : IHandler<CreateTeamCommand>
         if (!command.Validate(out errors))
             return new CommandResult(false, Messages.AlgumRegistroNulo, errors);
 
-        var team = new TeamEntity(command.Name, command.Coach, command.NumberPlayer, command.UniformColor, new byte[23]);
+        if (!string.IsNullOrEmpty(command.Shield))
+            shield = Convert.FromBase64String(command.Shield);
+
+        var team = new TeamEntity(command.Name, command.Coach, command.NumberPlayer, command.UniformColor, shield);
 
         _repositoryTeam.Save(team);
 
