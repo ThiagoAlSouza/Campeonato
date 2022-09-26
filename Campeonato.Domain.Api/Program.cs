@@ -1,3 +1,4 @@
+using Campeonato.Domain.Dados.Data;
 using Campeonato.Domain.Dados.Repositories.Team;
 using Campeonato.Domain.Entities.Team.Repository;
 
@@ -24,5 +25,6 @@ app.Run();
 
 void AddServices(WebApplicationBuilder builder)
 {
+    builder.Services.AddDbContext<DataContext>();
     builder.Services.AddTransient<IRepositoryTeam, RepositoryTeam>();
 }

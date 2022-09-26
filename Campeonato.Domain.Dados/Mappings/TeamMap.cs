@@ -4,12 +4,16 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Campeonato.Domain.Dados.Mappings;
 
-public class TimeMap : IEntityTypeConfiguration<TeamEntity>
+public class TeamMap : IEntityTypeConfiguration<TeamEntity>
 {
     public void Configure(EntityTypeBuilder<TeamEntity> builder)
     {
         builder.ToTable("TIMES");
         builder.HasKey(x => x.Id);
+
+        builder.Property(x => x.Id)
+            .ValueGeneratedOnAdd()
+            .UseIdentityColumn();
 
         builder.Property(x => x.Name)
             .HasColumnName("NAME")
