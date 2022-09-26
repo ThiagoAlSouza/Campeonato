@@ -28,6 +28,20 @@ public class TeamController : ControllerBase
 
     #region Methods
 
+    [HttpGet]
+    [Route("teams")]
+    public async Task<IActionResult> Get()
+    {
+        try
+        {
+            return Ok(await _repositoryTeam.GetAllTeams());
+        }
+        catch (Exception e)
+        {
+            return BadRequest(new CommandResult(e.Message, false, null));
+        }
+    }
+
     [HttpPost]
     [Route("teams")]
     public async Task<IActionResult> Post([FromBody] CreateTeamCommand body
