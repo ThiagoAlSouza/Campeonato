@@ -30,17 +30,25 @@ public class TeamHandler : IHandler<CreateTeamCommand>
 
     public CommandResult Handle(CreateTeamCommand command)
     {
-        if (!command.Validate(out errors))
-            return new CommandResult(false, Messages.ErroSalvarBanco, errors);
+        try
+        {
+            if (!command.Validate(out errors))
+                return new CommandResult(false, Messages.ErroSalvarBanco, errors);
 
-        if (!string.IsNullOrEmpty(command.Shield))
-            shield = Convert.FromBase64String(command.Shield);
+            if (!string.IsNullOrEmpty(command.Shield))
+                shield = Convert.FromBase64String(command.Shield);
 
-        var team = new TeamEntity(command.Name, command.Coach, command.NumberPlayer, command.UniformColor, shield);
+            var team = new TeamEntity(command.Name, command.Coach, command.NumberPlayer, command.UniformColor, shield);
 
-        _repositoryTeam.Save(team);
+            _repositoryTeam.Save(team);
 
-        return new CommandResult(true, Messages.RegistroSalvoSucesso, team);
+            return new CommandResult(true, Messages.RegistroSalvoSucesso, team);
+        }
+        catch (Exception e)
+        {
+            return new CommandResult(true, Messages.RegistroSalvoSucesso, e.Message);
+        }
+        
     }
 
     #endregion
