@@ -120,6 +120,9 @@
   <data name="AlgumRegistroNulo" xml:space="preserve">
     <value>Algum registro está nulo.</value>
   </data>
+  <data name="ErroSalvar" xml:space="preserve">
+    <value>Erro ao salvar.</value>
+  </data>
   <data name="ErroSalvarBanco" xml:space="preserve">
     <value>Erro ao salvar no banco.</value>
   </data>

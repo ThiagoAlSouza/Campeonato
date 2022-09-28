@@ -70,6 +70,15 @@ namespace Campeonato.Domain.Resource.Messages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Erro ao salvar..
+        /// </summary>
+        public static string ErroSalvar {
+            get {
+                return ResourceManager.GetString("ErroSalvar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Erro ao salvar no banco..
         /// </summary>
         public static string ErroSalvarBanco {

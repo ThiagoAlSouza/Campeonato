@@ -31,7 +31,7 @@ public class TeamHandler : IHandler<CreateTeamCommand>
     public CommandResult Handle(CreateTeamCommand command)
     {
         if (!command.Validate(out errors))
-            return new CommandResult(false, Messages.AlgumRegistroNulo, errors);
+            return new CommandResult(false, Messages.ErroSalvarBanco, errors);
 
         if (!string.IsNullOrEmpty(command.Shield))
             shield = Convert.FromBase64String(command.Shield);
