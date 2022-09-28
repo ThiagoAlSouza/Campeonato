@@ -1,7 +1,7 @@
 ﻿using Campeonato.Domain.Resource.Messages;
 using Campeonato.Domain.Shared.Command.Interfaces;
 
-namespace Campeonato.Domain.Commands;
+namespace Campeonato.Domain.Commands.Team;
 
 public class CreateTeamCommand : ICommand
 {

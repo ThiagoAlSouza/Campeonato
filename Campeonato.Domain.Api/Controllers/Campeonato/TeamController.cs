@@ -1,4 +1,4 @@
-﻿using Campeonato.Domain.Commands;
+﻿using Campeonato.Domain.Commands.Team;
 using Campeonato.Domain.Entities.Team.Repository;
 using Campeonato.Domain.Handlers;
 using Campeonato.Domain.Shared.Command;

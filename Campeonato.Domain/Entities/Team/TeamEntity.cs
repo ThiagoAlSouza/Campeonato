@@ -2,7 +2,7 @@
 
 public class TeamEntity
 {
-    #region MyRegion
+    #region Constructors
 
     public TeamEntity(string name, string coach, int numberPlayer, string uniformColor, byte[] shield)
     {
