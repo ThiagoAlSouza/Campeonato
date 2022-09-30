@@ -35,10 +35,7 @@ public class TeamHandler : IHandler<CreateTeamCommand>
             if (!command.Validate(out errors))
                 return new CommandResult(false, Messages.ErroSalvarBanco, errors);
 
-            if (!string.IsNullOrEmpty(command.Shield))
-                shield = Convert.FromBase64String(command.Shield);
-
-            var team = new TeamEntity(command.Name, command.Coach, command.NumberPlayer, command.UniformColor, shield);
+            var team = new TeamEntity(command.Name, command.Coach, command.NumberPlayer, command.UniformColor);
 
             _repositoryTeam.Save(team);
 

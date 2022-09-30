@@ -4,13 +4,12 @@ public class TeamEntity
 {
     #region Constructors
 
-    public TeamEntity(string name, string coach, int numberPlayer, string uniformColor, byte[] shield)
+    public TeamEntity(string name, string coach, int numberPlayer, string uniformColor)
     {
         Name = name;
         Coach = coach;
         NumberPlayer = numberPlayer;
         UniformColor = uniformColor;
-        Shield = shield;
     }
 
     #endregion
@@ -22,7 +21,6 @@ public class TeamEntity
     public string Coach { get; private set; }
     public int NumberPlayer { get; private set; }
     public string UniformColor { get; private set; }
-    public byte[] Shield { get; private set; }
 
     #endregion
 }

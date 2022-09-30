@@ -34,7 +34,7 @@ public class TeamController : ControllerBase
     {
         try
         {
-            return Ok(new CommandResult(true, string.Empty, await _repositoryTeam.GetAllTeams()));
+            return Ok (await _repositoryTeam.GetAllTeams());
         }
         catch (Exception e)
         {

@@ -30,9 +30,5 @@ public class TeamMap : IEntityTypeConfiguration<TeamEntity>
         builder.Property(x => x.UniformColor)
             .HasColumnName("UNIFORM_COLOR")
             .HasColumnType("varchar(30)");
-
-        builder.Property(x => x.Shield)
-            .HasColumnName("SHIELD")
-            .HasColumnType("VARBINARY(MAX)");
     }
 }
