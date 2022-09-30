@@ -7,14 +7,13 @@ public class CreateTeamCommand : ICommand
 {
     #region Constructors
 
-    public CreateTeamCommand(int id, string name, string coach, int numberPlayer, string uniformColor, string shield)
+    public CreateTeamCommand(int id, string name, string coach, int numberPlayer, string uniformColor)
     {
         Id = id;
         Name = name;
         Coach = coach;
         NumberPlayer = numberPlayer;
         UniformColor = uniformColor;
-        Shield = shield;
     }
 
     #endregion
@@ -26,7 +25,6 @@ public class CreateTeamCommand : ICommand
     public string Coach { get; private set; }
     public int NumberPlayer { get; private set; }
     public string UniformColor { get; private set; }
-    public string Shield { get; private set; }
 
     #endregion
 
